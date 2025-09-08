@@ -13,13 +13,13 @@ class StockInfo():
     
     def get_finacial_statement(self):
         return f"""
-        ### Quarterly Income Statement
+### Quarterly Income Statement
 {self.ticker.quarterly_income_stmt.loc[['Total Revenue', 'Gross Profit', 'Operating Income', 'Net Income']].to_markdown()}
 
-        ### Quarterly Balance Sheet
+### Quarterly Balance Sheet
 {self.ticker.quarterly_balance_sheet.loc[['Total Assets', 'Total Liabilities Net Minority Interest', 'Stockholders Equity']].to_markdown()}
 
-        ### Quarterly Cash Flow
+### Quarterly Cash Flow
 {self.ticker.quarterly_cash_flow.loc[['Operating Cash Flow', 'Investing Cash Flow', 'Financing Cash Flow']].to_markdown()}
         """
     
